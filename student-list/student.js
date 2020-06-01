@@ -1,11 +1,3 @@
-//class Bank{
-    //     firstname  = '';
-    //     lastName = '';
-    // }
-    // let b1 = new Bank();
-    // b1.firstname = 'Asher'
-    // b1.lastName = 'Lecover'
-    // console.log(b1);
 let student = [
     { name : 'ariel', age:35, class:'angular1'},
     { name : 'yakov', age:33, class:'angular 2'},
@@ -14,22 +6,19 @@ let student = [
     { name : 'avi', age:6, class:'angular 4'},
 ];
 for (let i = 0; i < student.length; i++) {
-    console.log(student[i].class)
+    student[i].age = 100
 }
 
 let myTemplate = document.getElementById('template_student').innerHTML
-console.log(myTemplate);
 
 function render(template, dataArr){
     let h = '';
     let r = /\[(.*)\]/g;
     let propertiesInTemplate = template.match(r)
 
-    // console.log(propertiesInTemplate);
     for (let i = 0; i < propertiesInTemplate.length; i++) {
         let p = propertiesInTemplate[i];
-        p = p.replace('[[', '').replace(']]', '')
-        console.log(p);
+        p = p.replace('[', '').replace(']', '')
         propertiesInTemplate[i] = p
     }
 
@@ -37,9 +26,8 @@ function render(template, dataArr){
         let itemHtml = template
         propertiesInTemplate.forEach(p =>{
             let propValue = item[p]
-            console.log(propValue);
             
-            itemHtml = itemHtml.replace(`[[${p}]]`, propValue)
+            itemHtml = itemHtml.replace(`[${p}]`, propValue)
         })
         h += itemHtml
     });
@@ -49,9 +37,3 @@ let myList = document.getElementById('myList')
 myList.innerHTML = render(myTemplate, student)
 
 
-
-
-
-
-
- 

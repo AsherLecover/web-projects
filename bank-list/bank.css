@@ -9,15 +9,17 @@ body{
 
 }
 .flex-col {
-    border: 1px solid blueviolet;
-
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
     padding: 5px;
-    margin: 5px 0;
-
-
+    margin: 8px 0;
 }
+
+.flex-col:hover {
+    background-color: rgb(245, 245, 239);
+  }
+
 section{
     text-align: left;
     padding: 0 15%;

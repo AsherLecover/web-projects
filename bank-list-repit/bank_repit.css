@@ -1,0 +1,10 @@
+.flex-col {
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 8px 0;
+}
+.flex-col:hover {
+    background-color: rgb(245, 245, 239);
+  }
