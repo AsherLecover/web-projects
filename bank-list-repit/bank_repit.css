@@ -1,3 +1,6 @@
+body{
+    margin: 20%;
+}
 .flex-col {
     border: 1px solid gray;
     display: flex;
@@ -8,3 +11,8 @@
 .flex-col:hover {
     background-color: rgb(245, 245, 239);
   }
+p{
+    display:inline
+}
+   
+  

@@ -66,11 +66,11 @@ let BankDb = {
         client.ID = i * 1234;
         let letter = String.fromCharCode(rend(25)+65);
         client.firstName = 'Asher ' + letter + letter;
-        client.firstName = 'Mr Lecover ' + letter + letter + letter;
+        client.lastName = 'Mr Lecover ' + letter + letter + letter;
         BankDb.Clients.push(client)
     }
 
-    for(let i = 3; i < 16; i++){
+    for(let i = 2; i < 15; i++){
         let account = new Account();
         account.ID = i;
         let clinetIndex = rend(5)
@@ -95,6 +95,24 @@ let BankDb = {
         account.Balance = BankDb.API.getBalance(account.ID))
 
 })();
+let c1 = new Client;
+c1.firstName = 'Asher1';
+c1.lastName = 'Lecover1';
+c1.ID = 1;
+
+let c2 = new Client;
+c2.firstName = 'Asher2';
+c2.lastName = 'Lecover2';
+c2.ID = 1;
+
+let c3 = new Client;
+c3.firstName = 'Asher3';
+c3.lastName = 'Lecover3';
+c3.ID = 1;
+
+let arr = [c1, c2, c3];
+console.log(arr[0])
+console.log(c3)
 
 
 
