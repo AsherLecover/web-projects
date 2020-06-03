@@ -1,6 +1,6 @@
 body{
-    margin: 20%;
-}
+    margin-left: 37%;
+    margin-right: 37%;}
 .flex-col {
     border: 1px solid gray;
     display: flex;
@@ -13,6 +13,10 @@ body{
   }
 p{
     display:inline
+}
+div:focus {
+    font-weight: bold;
+    background-color: aqua;
 }
    
   

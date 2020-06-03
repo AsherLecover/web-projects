@@ -12,7 +12,7 @@ function bankStart() {
 
   for (let i = 0; i < BankDb.Clients.length; i++) {
     arr.push(
-      `<div class="account flex-col">  id: <span>${BankDb.Accounts[i].ID}</span>
+      `<div class="account flex-col"> tabindex="1"> id: <span>${BankDb.Accounts[i].ID}</span>
 full name: ${BankDb.Clients[i].firstName} ${BankDb.Clients[i].lastName}<br/> 
       ClientId:  ${BankDb.Accounts[i].ClientId} <br/> 
       Balnce: ${BankDb.Accounts[i].Balance}<br/> </div>`
