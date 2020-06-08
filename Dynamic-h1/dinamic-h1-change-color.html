@@ -1,0 +1,61 @@
+<dyn-h1>Asher Lecover</dyn-h1>
+<script>
+  class dinamicH1 extends HTMLElement {
+    static get observedAttributes() {
+      return ["attribute"];
+    }
+
+    constructor() {
+      super();
+
+      const shadow = this.attachShadow({ mode: "open" });
+      const div = document.createElement("div");
+
+      this.h1 = document.createElement("h1");
+      this.h1.className = "h1";
+      this.h1.innerHTML = this.innerHTML;
+      div.appendChild(this.h1);
+
+      let style = document.createElement("style");
+
+      let arr = [
+        "AliceBlue",
+        "AntiqueWhite",
+        "Aqua",
+        "Azure",
+        "Black",
+        "Bisque",
+        "Cyan",
+        "Indigo" ,
+        "Khaki" ,
+        "LawnGreen" ,
+        "LightPink" ,
+        "Lime" ,
+        "Maroon",
+        "MidnightBlue",
+        "OrangeRed"
+      ];
+
+      let i = 0;
+
+      setInterval(function colorChange() {
+          if (i === arr.length) {
+              i = 0;
+          }
+          style.textContent = `
+   h1{
+       color: ${arr[i]};
+
+   }`;
+   console.log(arr[i]);
+   
+        i++
+      }, 100);
+
+      shadow.appendChild(div);
+      div.appendChild(style);
+    }
+  }
+
+  customElements.define("dyn-h1", dinamicH1);
+</script>
